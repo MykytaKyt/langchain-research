@@ -1,0 +1,28 @@
+fail_fast: false
+minimum_pre_commit_version: 2.13.0
+repos:
+  - repo: https://github.com/dtaivpp/commit-msg-regex-hook
+    rev: v0.2.2
+    hooks:
+      - id: commit-msg-regex-hook
+        args: ['--pattern', '^\s*(feat|bugfix|hotfix)\/\s*.*$',
+               "--failure_message='Commit message does not match the required pattern: 
+               Type/Description. Please ensure your commit message starts with feat, hotfix, or bugfix'"]
+        stages: [commit-msg]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: debug-statements
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        types: [python]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.6
+    hooks:
+      - id: ruff
+        types_or: [ python, pyi ]
+        args: [ --fix ]
+      - id: ruff-format
+        types_or: [ python, pyi ]
