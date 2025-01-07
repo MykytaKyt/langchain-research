@@ -1,7 +1,23 @@
 # langchain-research
+### Knowledge Base QA Bot
 
 
 ## Installation
+
+Firstly install UV packet manager 
+
+```
+On macOS and Linux.
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+```
+On Windows.
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+To install dependencies 
+```
+uv pip install -r requirements.txt
+```
 
 To install hooks follow these steps:
 
