@@ -9,3 +9,6 @@ transformers
 pypdf
 ollama
 pyyaml
+python-dotenv
+sentence-transformers
+langchain-huggingface
