@@ -2,6 +2,10 @@ fastapi
 uvicorn
 gradio
 langchain
+langchain-community
 langgraph
 qdrant-client
 transformers
+pypdf
+ollama
+pyyaml

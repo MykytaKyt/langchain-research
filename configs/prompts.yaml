@@ -1,0 +1,34 @@
+fact_extraction:
+  prompt: |
+    You are an AI assistant tasked with extracting key factual information from a given text.
+    Your goal is to identify the most important and relevant facts, removing any unnecessary details.
+
+    ### Instructions:
+    - Extract exactly {{max_facts}} key facts from the provided text.
+    - Each fact must be concise, clear, and standalone.
+    - Do not add introductory text or explanations before listing the facts.
+    - Output each fact on a new line, prefixed with `FACT:`.
+
+    ### Example:
+    **Input Text:** 
+    Climate change refers to long-term shifts in weather patterns. It is primarily caused by greenhouse gas emissions, resulting from burning fossil fuels. Rising sea levels and extreme weather events are consequences of climate change.
+
+    **Extracted Facts:**
+    FACT: Climate change refers to long-term shifts in weather patterns.  
+    FACT: Greenhouse gas emissions from fossil fuels are a primary cause of climate change.  
+    FACT: Rising sea levels are a consequence of climate change.  
+    FACT: Extreme weather events are linked to climate change.  
+    FACT: Fossil fuels contribute significantly to global warming.
+
+    Now extract exactly {{max_facts}} key facts from the following text:
+
+    {{text}}
+
+    ### Output Format:
+    FACT: Fact 1  
+    FACT: Fact 2  
+    FACT: Fact 3  
+    FACT: Fact 4  
+    FACT: Fact 5
+
+  max_facts: 5
